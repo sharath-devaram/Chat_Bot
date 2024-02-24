@@ -1,0 +1,16 @@
+{% extends 'chatapp/base.html' %}
+{% block body %}
+<h4 class="font-bold">You are in Index Page..!</h4>
+<h5 class="font-semibold">List of rooms...</h5>
+
+
+{% for chatroom in chatrooms %}
+    <div class="shadow-lg p-10 m-10 bg-gray-500 text-white rounded-lg">
+        <a href="{% url 'chatroom' chatroom.slug %}">{{chatroom.name}}</a></br>
+
+    </div>
+
+
+{% endfor %}
+
+{% endblock %}
